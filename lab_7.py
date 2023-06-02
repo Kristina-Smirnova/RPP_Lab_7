@@ -20,7 +20,7 @@ app = FastAPI()
 def calculate_rate(source: str, target: str, sum: int):
     conn = psycopg2.connect(
         host="localhost",
-        database="postgres",
+        database="rpp_lab_7",
         user="postgre",
         password="postgre"
     )
@@ -87,7 +87,7 @@ async def load(payload: dict):
     rates = payload["rates"]
     conn = psycopg2.connect(
         host="localhost",
-        database="postgres",
+        database="rpp_lab_7",
         user="postgre",
         password="postgre"
     )
@@ -127,7 +127,7 @@ async def load(payload: dict):
 def check_currency_lack(base_currency: str):
     conn = psycopg2.connect(
         host="localhost",
-        database="postgres",
+        database="rpp_lab_7",
         user="postgre",
         password="postgre"
     )
@@ -149,7 +149,7 @@ if __name__ == "__main__":
 def get_currency_rates():
     conn = psycopg2.connect(
         host="localhost",
-        database="postgres",
+        database="rpp_lab_7",
         user="postgre",
         password="postgre"
     )
@@ -199,7 +199,7 @@ async def add_chat_id(message: types.Message):
 def add_chat_id(chat_id):
     conn = psycopg2.connect(
             host="localhost",
-            database="postgres",
+            database="rpp_lab_7",
             user="postgre",
             password="postgre"
         )
@@ -294,7 +294,7 @@ async def process_delete_currency(message: types.Message, state: FSMContext):
 def delete_currency_in_database(currency_name: str):
     conn = psycopg2.connect(
             host="localhost",
-            database="postgres",
+            database="rpp_lab_7",
             user="postgre",
             password="postgre"
         )
@@ -348,7 +348,7 @@ async def process_edit_currency(message: types.Message, state: FSMContext):
 def edit_currency_in_database(currency_name: str, rate: int):
     conn = psycopg2.connect(
             host="localhost",
-            database="postgres",
+            database="rpp_lab_7",
             user="postgre",
             password="postgre"
         )
@@ -382,7 +382,7 @@ async def process_currency(message: types.Message, state: FSMContext):
 def add_currency_in_database(currency_name: str, rate: int):
     conn = psycopg2.connect(
             host="localhost",
-            database="postgres",
+            database="rpp_lab_7",
             user="postgre",
             password="postgre"
         )
